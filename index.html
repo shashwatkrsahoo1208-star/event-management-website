@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventora | Discover Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">Eventora<span>.</span></a>
+    <nav><a href="#events">Explore</a><a href="#about">About</a></nav>
+    <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MAKE EVERY MOMENT COUNT</p>
+        <h1>Find your next<br><span>great experience.</span></h1>
+        <p class="intro">Discover events, meet people, and create memories that last.</p>
+        <a class="primary-btn" href="#events">Explore Events</a>
+      </div>
+      <div class="hero-art" aria-label="Event celebration illustration">
+        <div class="art-circle">✦</div><div class="art-card">LIVE<br><b>THE<br>MOMENT</b></div>
+      </div>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-heading">
+        <div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Upcoming events</h2></div>
+        <input id="searchInput" type="search" placeholder="Search events..." aria-label="Search events">
+      </div>
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Music">Music</button>
+        <button class="filter" data-category="Technology">Technology</button>
+        <button class="filter" data-category="Art">Art</button>
+        <button class="filter" data-category="Community">Community</button>
+      </div>
+      <div class="event-grid" id="eventGrid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">YOUR NEXT STORY STARTS HERE</p>
+      <h2>Good people. Great events.<br>Unforgettable moments.</h2>
+      <p>Eventora makes it easy to discover experiences and register for the events you love.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Eventora. Made for memorable moments.</footer>
+
+  <dialog id="eventDialog">
+    <button class="close" id="closeDialog" aria-label="Close">×</button>
+    <p class="eyebrow" id="dialogCategory"></p>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogInfo"></p>
+    <form id="registerForm">
+      <input name="name" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Your email" required>
+      <button class="primary-btn" type="submit">Register</button>
+    </form>
+    <p id="formMessage" role="status"></p>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
